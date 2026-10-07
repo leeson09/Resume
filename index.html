@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Leeson Glen Dsouza — Major Incident Manager</title>
+<meta name="description" content="Interactive resume of Leeson Glen Dsouza — Major Incident Manager, 8+ years in Incident & Major Incident Management, ITIL 4." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* ---- PREMIUM PALETTE: deep obsidian + royal navy + champagne gold ---- */
+    --bg:#070b14;
+    --bg2:#0b1322;
+    --panel:#0f1a2e;
+    --card:rgba(255,255,255,0.04);
+    --card-brd:rgba(201,166,100,0.18);
+    --ink:#f3f1ea;
+    --muted:#a9b2c3;
+    --gold:#d4af6a;
+    --gold-2:#f2d79b;
+    --royal:#2a4d8f;
+    --royal-light:#4f7fd6;
+    --glass:rgba(255,255,255,0.05);
+    --shadow:0 24px 60px rgba(0,0,0,0.55);
+    --gold-grad:linear-gradient(135deg,#f2d79b 0%,#d4af6a 45%,#b8893c 100%);
+    --name-grad:linear-gradient(180deg,#ffffff 0%,#e9e2cf 60%,#d4af6a 140%);
+    --body-bg:
+      radial-gradient(1200px 700px at 15% -10%, rgba(42,77,143,0.35), transparent 60%),
+      radial-gradient(1000px 600px at 90% 10%, rgba(212,175,106,0.14), transparent 55%),
+      radial-gradient(900px 900px at 50% 120%, rgba(42,77,143,0.25), transparent 60%),
+      linear-gradient(180deg,#070b14 0%,#0b1322 50%,#070b14 100%);
+    --grid-line:rgba(212,175,106,0.06);
+    --topbar-bg:rgba(7,11,20,0.7);
+  }
+  /* ---- DAY / LIGHT THEME: ivory + royal navy + deep gold ---- */
+  html[data-theme="light"]{
+    --bg:#f6f3ec;
+    --bg2:#fffdf8;
+    --panel:#ffffff;
+    --card:rgba(255,255,255,0.75);
+    --card-brd:rgba(176,137,60,0.28);
+    --ink:#1c2538;
+    --muted:#5a6478;
+    --gold:#a9792b;
+    --gold-2:#8a6214;
+    --royal:#2a4d8f;
+    --royal-light:#2f5fb5;
+    --glass:rgba(255,255,255,0.65);
+    --shadow:0 20px 50px rgba(42,61,97,0.18);
+    --gold-grad:linear-gradient(135deg,#d4af6a 0%,#b8893c 45%,#8a6214 100%);
+    --name-grad:linear-gradient(180deg,#1c2538 0%,#2a4d8f 70%,#a9792b 150%);
+    --body-bg:
+      radial-gradient(1200px 700px at 15% -10%, rgba(42,77,143,0.14), transparent 60%),
+      radial-gradient(1000px 600px at 90% 10%, rgba(176,137,60,0.14), transparent 55%),
+      radial-gradient(900px 900px at 50% 120%, rgba(42,77,143,0.10), transparent 60%),
+      linear-gradient(180deg,#f6f3ec 0%,#fffdf8 50%,#f1ece0 100%);
+    --grid-line:rgba(176,137,60,0.10);
+    --topbar-bg:rgba(255,253,248,0.75);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--ink);line-height:1.65;overflow-x:hidden;
+    background:var(--body-bg);
+    background-attachment:fixed;transition:color .4s;
+  }
+  h1,h2,h3,.font-display{font-family:'Sora',sans-serif}
+
+  /* premium fixed texture overlays */
+  .grid-art{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(circle at 50% 25%,#000 5%,transparent 70%);opacity:.5}
+  .sheen{position:fixed;inset:0;z-index:-1;background:conic-gradient(from 220deg at 70% 0%, transparent 0deg, rgba(212,175,106,0.08) 40deg, transparent 90deg);pointer-events:none}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold-grad);z-index:50;transition:width .1s}
+
+  /* top bar */
+  .topbar{position:fixed;top:0;right:0;left:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:14px 26px;transition:.3s}
+  .brand{font-family:'Sora';font-weight:800;letter-spacing:1px;font-size:1.05rem;opacity:0;transform:translateY(-8px);transition:.4s;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .topbar.scrolled{backdrop-filter:blur(12px);background:var(--topbar-bg);border-bottom:1px solid var(--card-brd)}
+  .topbar.scrolled .brand{opacity:1;transform:none}
+  .icon-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--card-brd);background:var(--glass);color:var(--gold);cursor:pointer;display:grid;place-items:center;transition:.25s;backdrop-filter:blur(8px)}
+  .icon-btn:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 8px 24px rgba(212,175,106,.25)}
+  .icon-btn svg{width:20px;height:20px;fill:currentColor}
+  .icon-btn svg[stroke]{fill:none;stroke:currentColor}
+
+  .container{max-width:920px;margin:0 auto;padding:0 22px}
+
+  /* ---------------- HERO ---------------- */
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:96px 22px 54px}
+  .avatar{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;font-family:'Sora';font-weight:800;font-size:3rem;position:relative;
+    background:conic-gradient(from 150deg,#f2d79b,#d4af6a,#2a4d8f,#f2d79b);box-shadow:0 0 50px rgba(212,175,106,.35),var(--shadow);animation:pop .9s cubic-bezier(.2,.9,.3,1.3) both}
+  .avatar::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--bg2)}
+  .avatar span{position:relative;z-index:1;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  @keyframes pop{from{opacity:0;transform:scale(.5)}}
+
+  .hero h1{
+    font-size:clamp(3rem,9vw,5.6rem);         /* BIGGER NAME */
+    font-weight:800;margin-top:30px;letter-spacing:-1.5px;line-height:1.02;
+    background:var(--name-grad);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    text-shadow:0 2px 30px rgba(212,175,106,.15)}
+  .hero .title{
+    font-size:clamp(1.4rem,4.5vw,2.3rem);     /* BIGGER TITLE */
+    font-weight:700;margin-top:12px;letter-spacing:1px;
+    background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .title-rule{width:120px;height:2px;margin:18px auto 0;background:var(--gold-grad);border-radius:2px}
+  .badge{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:8px 18px;border:1px solid var(--card-brd);border-radius:30px;background:var(--glass);font-size:.9rem;color:var(--muted)}
+  .pulse{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+
+  /* contact row — always visible */
+  .contact{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+  .chipbtn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid var(--card-brd);background:var(--glass);color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;cursor:pointer;transition:.25s;backdrop-filter:blur(8px)}
+  .chipbtn:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 10px 28px rgba(212,175,106,.22)}
+  .chipbtn svg{width:18px;height:18px;fill:var(--gold)}
+  .chipbtn.linkedin:hover{border-color:var(--royal-light);box-shadow:0 10px 28px rgba(79,127,214,.3)}
+  .chipbtn.linkedin svg{fill:var(--royal-light)}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px;width:100%;max-width:740px}
+  .stat{background:var(--card);border:1px solid var(--card-brd);border-radius:16px;padding:20px 10px;backdrop-filter:blur(10px)}
+  .stat .num{font-family:'Sora';font-weight:800;font-size:clamp(1.5rem,4vw,2.1rem);background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+  .scroll-cue{margin-top:48px;color:var(--gold);font-size:.82rem;letter-spacing:2px;animation:bob 1.8s infinite;opacity:.8}
+  @keyframes bob{50%{transform:translateY(8px)}}
+
+  /* ---------------- SECTIONS ---------------- */
+  section.block{padding:58px 0}
+  .reveal{opacity:0;transform:translateY(30px);transition:.7s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+  .sec-head .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--gold-grad);flex:none;box-shadow:0 8px 20px rgba(212,175,106,.25)}
+  .sec-head .ic svg{width:24px;height:24px;fill:#1a1206}
+  .sec-head h2{font-size:1.7rem;font-weight:700}
+  .sec-head .hint{font-size:.8rem;color:var(--muted);font-weight:400}
+
+  .summary-card{background:var(--card);border:1px solid var(--card-brd);border-radius:18px;padding:30px;backdrop-filter:blur(10px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .summary-card::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:var(--gold-grad)}
+  .summary-card p{color:var(--muted);font-size:1.02rem}
+  .summary-card p strong{color:var(--gold-2)}
+
+  /* skills */
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .skill{padding:10px 16px;border-radius:30px;background:var(--glass);border:1px solid var(--card-brd);font-size:.88rem;font-weight:500;cursor:default;transition:.22s;display:inline-flex;align-items:center;gap:8px}
+  .skill:hover{transform:translateY(-3px) scale(1.04);border-color:var(--gold);color:var(--gold-2);box-shadow:0 8px 20px rgba(212,175,106,.22)}
+  .skill .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  .skill.soft .dot{background:var(--royal-light)}
+  .skill.soft:hover{border-color:var(--royal-light);color:#bcd2f7}
+
+  /* ---------------- EXPERIENCE (hover to reveal) ---------------- */
+  .exp{background:var(--card);border:1px solid var(--card-brd);border-radius:16px;margin-bottom:14px;overflow:hidden;backdrop-filter:blur(10px);transition:.3s;position:relative}
+  .exp::before{content:"";position:absolute;top:0;left:0;width:0;height:100%;background:var(--gold-grad);transition:width .3s}
+  .exp:hover,.exp.open{border-color:var(--gold);box-shadow:0 14px 36px rgba(0,0,0,.4)}
+  .exp:hover::before,.exp.open::before{width:4px}
+  .exp-head{display:flex;align-items:center;gap:16px;padding:22px 24px;cursor:pointer;user-select:none}
+  .exp-logo{width:50px;height:50px;border-radius:12px;flex:none;display:grid;place-items:center;font-family:'Sora';font-weight:800;font-size:1.2rem;color:#1a1206;background:var(--gold-grad)}
+  .exp-meta{flex:1;min-width:0}
+  .exp-role{font-family:'Sora';font-weight:700;font-size:1.12rem}
+  .exp-co{color:var(--gold-2);font-size:.92rem;font-weight:500;margin-top:2px}
+  .exp-date{font-size:.78rem;color:var(--muted);background:var(--glass);border:1px solid var(--card-brd);padding:5px 12px;border-radius:20px;white-space:nowrap}
+  .latest-flag{display:inline-block;font-size:.62rem;letter-spacing:1px;text-transform:uppercase;color:#1a1206;background:var(--gold-grad);padding:2px 8px;border-radius:5px;margin-left:8px;vertical-align:middle;font-weight:700}
+  .exp-arrow{width:22px;height:22px;fill:var(--muted);transition:transform .35s;flex:none}
+  .exp.open .exp-arrow{transform:rotate(180deg)}
+  .exp-body{max-height:0;overflow:hidden;transition:max-height .5s ease}
+  .exp-body-inner{padding:0 24px 24px 90px}
+  .exp-body ul{list-style:none}
+  .exp-body li{position:relative;padding-left:22px;margin-bottom:9px;color:var(--muted);font-size:.94rem}
+  .exp-body li::before{content:"▹";position:absolute;left:0;color:var(--gold)}
+  .mini-label{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:700;margin:16px 0 10px;display:flex;align-items:center;gap:8px}
+  .mini-label svg{width:16px;height:16px;fill:var(--gold)}
+  .win li::before{content:"★";color:var(--gold-2)}
+
+  /* two col */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .mini-card{background:var(--card);border:1px solid var(--card-brd);border-radius:16px;padding:24px;backdrop-filter:blur(10px);transition:.25s}
+  .mini-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .mini-card h3{font-size:1.1rem;margin-bottom:6px}
+  .mini-card .sub{color:var(--muted);font-size:.92rem}
+
+  footer{text-align:center;padding:46px 22px 64px;color:var(--muted);font-size:.84rem}
+  footer .g{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:600}
+
+  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--gold-grad);color:#1a1206;padding:12px 22px;border-radius:12px;font-weight:700;font-size:.9rem;opacity:0;transition:.35s;z-index:60}
+  .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+  @media(max-width:620px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .exp-body-inner{padding-left:24px}
+    .two{grid-template-columns:1fr}
+    .hero h1{font-size:clamp(2.6rem,13vw,4rem)}
+  }
+  @media print{
+    .grid-art,.sheen,.topbar,#progress,.scroll-cue,.toast{display:none}
+    .exp-body{max-height:none!important}
+    body{background:#fff;color:#000}
+  }
+</style>
+</head>
+<body>
+  <div id="progress"></div>
+  <div class="grid-art"></div>
+  <div class="sheen"></div>
+
+  <div class="topbar" id="topbar">
+    <div class="brand">LEESON G. DSOUZA</div>
+    <div style="display:flex;gap:10px">
+      <button class="icon-btn" id="themeBtn" title="Toggle Day / Dark theme" aria-label="Toggle theme">
+        <svg id="themeIcon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36A5.4 5.4 0 0 1 12 3z"/></svg>
+      </button>
+      <button class="icon-btn" id="printBtn" title="Download / Print as PDF" aria-label="Print">
+        <svg viewBox="0 0 24 24"><path d="M19 8H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3zm-3 11H8v-5h8zm3-7a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM18 3H6v4h12z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="avatar"><span>LGD</span></div>
+    <h1>Leeson Glen<br>Dsouza</h1>
+    <div class="title">Major Incident Manager</div>
+    <div class="title-rule"></div>
+    <div class="badge"><span class="pulse"></span> Open to opportunities · Bengaluru, Karnataka, India</div>
+
+    <div class="contact">
+      <a class="chipbtn" href="tel:+918867660682">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+        +91 88676 60682
+      </a>
+      <a class="chipbtn" href="mailto:leeaonglen@gmail.com">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>
+        leeaonglen@gmail.com
+      </a>
+      <a class="chipbtn linkedin" href="https://www.linkedin.com/in/leeson-dsouza-b22952a1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.3 18.3V10H5.7v8.3zM7 8.8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11.3 9.5v-4.6c0-2.4-1.3-3.6-3.1-3.6a2.7 2.7 0 0 0-2.4 1.3V10h-2.6v8.3h2.6v-4.4c0-1.2.2-2.3 1.7-2.3s1.5 1.3 1.5 2.4v4.3z"/></svg>
+        LinkedIn Profile
+      </a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num" data-count="8" data-suffix="+">0</div><div class="lbl">Years Exp</div></div>
+      <div class="stat"><div class="num" data-count="250" data-suffix="+">0</div><div class="lbl">Incidents / mo</div></div>
+      <div class="stat"><div class="num" data-count="20" data-suffix="%">0</div><div class="lbl">Efficiency ↑</div></div>
+      <div class="stat"><div class="num" data-count="10" data-suffix="">0</div><div class="lbl">Team Size</div></div>
+    </div>
+    <div class="scroll-cue">▼ SCROLL TO EXPLORE</div>
+  </header>
+
+  <div class="container">
+    <!-- ABOUT -->
+    <section class="block reveal">
+      <div class="sec-head">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v6c0 5 3.8 8.6 9 10 5.2-1.4 9-5 9-10V7z"/></svg></span>
+        <h2>About Me</h2>
+      </div>
+      <div class="summary-card">
+        <p>Results-driven <strong>Major Incident Manager</strong> with <strong>8+ years</strong> of experience delivering high-availability operations across enterprise environments. Expert in <strong>P1/P2 incident command</strong>, <strong>ITIL 4</strong> best practices, Root Cause Analysis and continuous service improvement — consistently restoring services fast while exceeding SLA targets. A people-first leader skilled in shift governance, coaching, and cross-functional coordination between technical teams, leadership and stakeholders.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="block reveal">
+      <div class="sec-head">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+        <h2>Skills &amp; Expertise</h2>
+      </div>
+      <div class="chips" id="skillChips"></div>
+      <div class="mini-label" style="margin-top:22px"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4 10H8v-1c0-1.3 2.7-2 4-2s4 .7 4 2z"/></svg> Soft Skills</div>
+      <div class="chips" id="softChips"></div>
+      <div class="mini-label" style="margin-top:22px"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg> Tools</div>
+      <div class="chips" id="toolChips"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="block reveal">
+      <div class="sec-head">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-6 0h-4V5h4z"/></svg></span>
+        <h2>Work Experience <span class="hint">· hover (or tap) a role to reveal details</span></h2>
+      </div>
+      <div id="expList"></div>
+    </section>
+
+    <!-- EDUCATION & CERT -->
+    <section class="block reveal">
+      <div class="sec-head">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8z"/></svg></span>
+        <h2>Education &amp; Certifications</h2>
+      </div>
+      <div class="two">
+        <div class="mini-card"><h3>🎓 BCA in Computers</h3><div class="sub">Mangalore University · 2016</div></div>
+        <div class="mini-card"><h3>📜 ITIL 4 Foundation</h3><div class="sub">An Introduction to ITIL 4</div></div>
+      </div>
+      <div class="mini-label" style="margin-top:22px"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg> Languages Known</div>
+      <div class="chips">
+        <span class="skill soft"><span class="dot"></span>English</span>
+        <span class="skill soft"><span class="dot"></span>Kannada</span>
+        <span class="skill soft"><span class="dot"></span>Hindi</span>
+      </div>
+    </section>
+  </div>
+
+  <footer>Designed &amp; built with <span class="g">precision</span> · © <span id="yr"></span> Leeson Glen Dsouza · Hosted on GitHub Pages</footer>
+  <div class="toast" id="toast">Copied!</div>
+
+<script>
+const skills=["Incident Management","Major Incident Management (MIM)","Root Cause Analysis (RCA)","Escalation Management","Change Management","Problem Management","Stakeholder Management","IT Service Management (ITSM)","SLA & KPI Management","Service Desk Operations","Continuous Service Improvement (CSI)","Resource Allocation Strategies","IT Service Delivery"];
+const soft=["People Manager","Decision Making","Team Leadership","Cross-Functional Collaboration","Communicator"];
+const tools=["ServiceNow","Microsoft O365","Microsoft Teams","Enterprise Monitoring","Advanced Excel"];
+
+const experience=[
+  { role:"Major Incident Manager", co:"Power Bridge Systems Pvt Ltd (Vendor: Amazon)", date:"Apr '26 – Present", logo:"PB", latest:true,
+    points:[
+      "Orchestrate Incident & Major Incident Management lifecycles with real-time prioritization and impact analysis for rapid service restoration.",
+      "Lead & coordinate P1 and P2 Major Incident bridges, ensuring cross-functional engagement and precise, time-bound executive updates to senior leadership.",
+      "Manage shift resources and dynamically allocate tickets within SLA & OLA thresholds, driving optimal workforce utilization.",
+      "Monitor ServiceNow dashboards, Microsoft Teams channels and email queues to identify risks and eliminate incident oversight.",
+      "Partner with Problem Management teams on in-depth RCA and assess permanent remediation through standard or preventive changes."
+    ],
+    wins:[
+      "Single point of coordination during major incidents — bridge calls, stakeholder comms, escalation & executive updates.",
+      "Drive rapid restoration of 250+ incidents monthly while consistently exceeding SLA targets.",
+      "Champion continuous service improvement (CSI) initiatives for long-term operational stability."
+    ] },
+  { role:"Incident Management Lead", co:"Microland", date:"Sep '23 – Apr '26", logo:"ML",
+    points:[
+      "Orchestrated Incident & Major Incident lifecycles with real-time prioritization for rapid restoration.",
+      "Facilitated operational governance calls to review workload distribution and align response strategies.",
+      "Led P1/P2 Major Incident bridges with time-bound executive updates to senior leadership.",
+      "Delivered onboarding & capability-building sessions on ITIL process, KPIs, SLAs, audit readiness and documentation.",
+      "Performed ticket quality audits with structured reviews and 1:1 coaching to elevate team performance.",
+      "Collaborated with Change & Problem Management teams for controlled production transitions and permanent remediation."
+    ],
+    wins:[
+      "17% ↓ incident escalation via a cross-functional improvement project.",
+      "9% ↓ Mean Time to Resolution (MTTR) through improved coordination.",
+      "25% ↑ closure accuracy & documentation quality via standardization.",
+      "20% ↑ onboarding efficiency with a new-hire training program.",
+      "12% ↑ internal stakeholder satisfaction.",
+      "Managed shift-based teams of up to 10 resources ensuring SLA adherence."
+    ] },
+  { role:"Senior Analyst", co:"Accenture", date:"May '19 – Aug '23", logo:"AC",
+    points:[
+      "Administered enterprise identity & access management — Shared Mailboxes, Security Groups and Distribution Lists — ensuring compliance & governance.",
+      "Configured & supported Microsoft O365 environments, optimizing collaboration and messaging workflows.",
+      "Resolved authentication failures, network/VPN access issues and service-desk incidents within SLA targets.",
+      "Provisioned application & web access aligned to SOPs, security controls and audit requirements.",
+      "Spearheaded P1 Major Incidents — achieved a 20% reduction in service downtime."
+    ] },
+  { role:"Technical Support Engineer", co:"Concentrix", date:"Sep '18 – May '19", logo:"CX",
+    points:[
+      "Delivered high-quality L1/L2 technical support via calls, chats and tickets for Texas Instruments clients.",
+      "Diagnosed & remediated hardware/software faults, enhancing reliability and customer satisfaction.",
+      "Supported software deployments, password resets, VPN troubleshooting, domain joins, printer and browser issues.",
+      "Resolved SharePoint & shared network access issues for uninterrupted business operations."
+    ] },
+  { role:"Catalog Associate", co:"Amazon", date:"Jul '17 – Apr '18", logo:"AZ",
+    points:[
+      "Analyzed seller catalog discrepancies and executed corrective actions — 15–20% defect-rate reduction.",
+      "Enabled sellers to optimize listings & metadata, boosting engagement by 10–15%.",
+      "Executed high-volume bulk updates via advanced Excel workflows — 25% efficiency gain.",
+      "Validated product data against SOPs & compliance standards, maintaining 98% data accuracy."
+    ] }
+];
+
+const el=(h)=>{const t=document.createElement('template');t.innerHTML=h.trim();return t.content.firstChild;};
+const put=(id,arr,cls)=>{const w=document.getElementById(id);arr.forEach(s=>w.appendChild(el(`<span class="skill ${cls||''}"><span class="dot"></span>${s}</span>`)));};
+put('skillChips',skills);put('softChips',soft,'soft');put('toolChips',tools);
+
+const list=document.getElementById('expList');
+experience.forEach(j=>{
+  const wins=j.wins?`<div class="mini-label"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>Key Achievements</div><ul class="win">${j.wins.map(w=>`<li>${w}</li>`).join('')}</ul>`:'';
+  const flag=j.latest?'<span class="latest-flag">Latest</span>':'';
+  const node=el(`<div class="exp"${j.latest?' data-latest="1"':''}>
+    <div class="exp-head">
+      <div class="exp-logo">${j.logo}</div>
+      <div class="exp-meta"><div class="exp-role">${j.role}${flag}</div><div class="exp-co">${j.co}</div></div>
+      <div class="exp-date">${j.date}</div>
+      <svg class="exp-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+    </div>
+    <div class="exp-body"><div class="exp-body-inner"><ul>${j.points.map(p=>`<li>${p}</li>`).join('')}</ul>${wins}</div></div>
+  </div>`);
+  const body=node.querySelector('.exp-body');
+  const open=()=>{node.classList.add('open');body.style.maxHeight=body.scrollHeight+'px';};
+  const close=()=>{node.classList.remove('open');body.style.maxHeight=0;};
+  // hover (desktop)
+  node.addEventListener('mouseenter',open);
+  node.addEventListener('mouseleave',close);
+  // tap/click (mobile + accessibility)
+  node.querySelector('.exp-head').addEventListener('click',()=>{node.classList.contains('open')?close():open();});
+  list.appendChild(node);
+});
+
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
+
+// counters
+function animateCount(elm){const target=+elm.dataset.count,suf=elm.dataset.suffix||'';let cur=0;const step=Math.max(1,target/60);const t=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(t);}elm.textContent=Math.floor(cur)+suf;},16);}
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(n=>cio.observe(n));
+
+// progress + topbar
+const prog=document.getElementById('progress'),tb=document.getElementById('topbar');
+addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;prog.style.width=(scrollY/h*100)+'%';tb.classList.toggle('scrolled',scrollY>60);});
+
+// print — expand all first
+document.getElementById('printBtn').addEventListener('click',()=>{document.querySelectorAll('.exp').forEach(x=>{x.classList.add('open');x.querySelector('.exp-body').style.maxHeight='none';});setTimeout(()=>window.print(),200);});
+
+// ---------- DAY / DARK THEME TOGGLE ----------
+const root=document.documentElement,ti=document.getElementById('themeIcon');
+const MOON='M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36A5.4 5.4 0 0 1 12 3z';
+const SUN='M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1';
+function applyTheme(t){
+  root.setAttribute('data-theme',t);
+  // show the icon of what you'll switch TO: dark shows sun, light shows moon
+  ti.setAttribute('d', t==='dark' ? SUN : MOON);
+  ti.parentElement.setAttribute('fill','none');
+  if(t==='light'){ti.setAttribute('stroke','currentColor');ti.setAttribute('stroke-width','2');ti.setAttribute('stroke-linecap','round');ti.removeAttribute('fill');}
+  else{ti.removeAttribute('stroke');ti.removeAttribute('stroke-width');}
+}
+let saved=null; try{saved=localStorage.getItem('rt-theme');}catch(e){}
+applyTheme(saved || 'dark');
+document.getElementById('themeBtn').addEventListener('click',()=>{
+  const next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('rt-theme',next);}catch(e){}
+});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
