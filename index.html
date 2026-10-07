@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leeson Glen Dsouza — Major Incident Manager</title>
+  <meta name="description" content="Resume of Leeson Glen Dsouza, Major Incident Manager with 8+ years in Incident & Major Incident Management, ITIL 4, and IT Service Delivery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f2a4a;
+      --navy-2: #163a63;
+      --accent: #1f8fd6;
+      --accent-dark: #0d6aa8;
+      --ink: #2b3440;
+      --muted: #5b6775;
+      --line: #e3e8ef;
+      --bg: #f4f6fa;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 960px; margin: 32px auto; background: var(--card); box-shadow: 0 10px 40px rgba(15,42,74,0.12); border-radius: 16px; overflow: hidden; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, var(--accent-dark) 140%);
+      color: #fff; padding: 48px 48px 40px;
+      position: relative;
+    }
+    header::after { content:""; position:absolute; inset:0; background:
+      radial-gradient(circle at 85% 20%, rgba(31,143,214,0.35), transparent 45%); pointer-events:none; }
+    header h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.5px; position: relative; }
+    header .role { font-size: 1.2rem; font-weight: 500; color: #9fd0f0; margin-top: 4px; position: relative; }
+    .contact { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 0.92rem; position: relative; }
+    .contact a, .contact span { color: #dfe9f4; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+    .contact a:hover { color: #fff; text-decoration: underline; }
+    .contact .ic { width: 16px; height: 16px; fill: var(--accent); flex: none; }
+
+    /* Layout */
+    main { padding: 40px 48px 48px; }
+    section { margin-bottom: 34px; }
+    section:last-child { margin-bottom: 0; }
+    h2 {
+      font-size: 1.05rem; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--navy); font-weight: 700; margin-bottom: 16px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--line); position: relative;
+    }
+    h2::after { content:""; position:absolute; left:0; bottom:-2px; width:56px; height:2px; background: var(--accent); }
+
+    p.summary { color: var(--ink); margin-bottom: 14px; }
+    ul { list-style: none; }
+    ul.bullets li { position: relative; padding-left: 22px; margin-bottom: 8px; color: var(--ink); }
+    ul.bullets li::before { content:""; position:absolute; left:0; top:11px; width:7px; height:7px; border-radius:50%; background: var(--accent); }
+
+    /* Chips */
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { background: #eaf4fb; color: var(--accent-dark); border: 1px solid #cfe6f6;
+      padding: 5px 12px; border-radius: 20px; font-size: 0.84rem; font-weight: 500; }
+    .chip.soft { background: #eef1f6; color: var(--navy-2); border-color: #dde3ec; }
+
+    /* Experience */
+    .job { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .job:last-child { border-bottom: none; padding-bottom: 0; }
+    .job-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+    .job-title { font-weight: 700; color: var(--navy); font-size: 1.05rem; }
+    .job-company { color: var(--accent-dark); font-weight: 600; font-size: 0.95rem; }
+    .job-date { color: var(--muted); font-size: 0.86rem; font-weight: 500; white-space: nowrap; background:#f1f4f9; padding:3px 10px; border-radius:6px; height:fit-content; }
+    .job .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); font-weight: 600; margin: 10px 0 6px; }
+
+    .edu-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+    .edu-row .deg { font-weight: 600; color: var(--navy); }
+
+    footer { text-align: center; padding: 22px; color: var(--muted); font-size: 0.82rem; background:#fbfcfe; border-top:1px solid var(--line); }
+
+    /* Print */
+    @media print {
+      body { background:#fff; }
+      .wrap { box-shadow:none; margin:0; border-radius:0; max-width:none; }
+      header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .chip, .job-date { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    @media (max-width: 640px) {
+      header, main { padding-left: 24px; padding-right: 24px; }
+      header h1 { font-size: 2rem; }
+      .wrap { margin: 0; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- ================= HEADER ================= -->
+    <header>
+      <h1>Leeson Glen Dsouza</h1>
+      <div class="role">Major Incident Manager</div>
+      <div class="contact">
+        <a href="mailto:leeaonglen@gmail.com">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>
+          leeaonglen@gmail.com
+        </a>
+        <a href="tel:+918867660682">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+          +91 88676 60682
+        </a>
+        <span>
+          <svg class="ic" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+          Bengaluru, Karnataka, India
+        </span>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= SUMMARY ================= -->
+      <section>
+        <h2>Professional Summary</h2>
+        <p class="summary">Highly experienced &amp; results-driven professional, leveraging extensive experience in Incident and Major Incident Management, ITIL best practices, and service delivery leadership to enhance operational resilience, minimize downtime, and drive continuous improvement within dynamic, growth-oriented organizations.</p>
+        <ul class="bullets">
+          <li>Accomplishment-driven leader with over 8 years of experience, delivering high-availability operations across enterprise environments.</li>
+          <li>Proven expertise in Major Incident Management (P1/P2), handling 250+ incidents monthly while consistently meeting and exceeding SLA targets.</li>
+          <li>ITIL 4 Foundation certified, with strong command of Incident, Problem, and Change Management frameworks — driving efficiency improvements of up to 20%.</li>
+          <li>Proficient in real-time incident triage, priority analysis, and cross-functional coordination across technical teams, leadership, and stakeholders.</li>
+          <li>Skilled in resource management, shift governance, ticket auditing, and performance coaching to improve team productivity and documentation quality.</li>
+          <li>Hands-on with ServiceNow, Microsoft Teams, O365, and enterprise monitoring tools to proactively identify risks and prevent service disruptions.</li>
+          <li>Strategic focus on Root Cause Analysis, Continuous Service Improvement (CSI), and process optimization for long-term stability and business continuity.</li>
+        </ul>
+      </section>
+
+      <!-- ================= CORE COMPETENCIES ================= -->
+      <section>
+        <h2>Core Competencies</h2>
+        <div class="chips">
+          <span class="chip">Incident Management</span>
+          <span class="chip">Root Cause Analysis (RCA)</span>
+          <span class="chip">Escalation Management</span>
+          <span class="chip">Major Incident Management (MIM)</span>
+          <span class="chip">Change Management</span>
+          <span class="chip">Technical Assistance &amp; Support</span>
+          <span class="chip">Stakeholder Management</span>
+          <span class="chip">Problem Management</span>
+          <span class="chip">Resource Allocation Strategies</span>
+          <span class="chip">IT Service Delivery</span>
+          <span class="chip">IT Service Management (ITSM)</span>
+          <span class="chip">Stakeholder Communication</span>
+          <span class="chip">SLA &amp; KPI Management</span>
+          <span class="chip">Service Desk Operations</span>
+          <span class="chip">Continuous Service Improvement (CSI)</span>
+        </div>
+      </section>
+
+      <!-- ================= SOFT SKILLS ================= -->
+      <section>
+        <h2>Soft Skills</h2>
+        <div class="chips">
+          <span class="chip soft">People Manager</span>
+          <span class="chip soft">Decision Making</span>
+          <span class="chip soft">Team Leadership</span>
+          <span class="chip soft">Cross-Functional Collaboration</span>
+          <span class="chip soft">Communicator</span>
+        </div>
+      </section>
+
+      <!-- ================= EXPERIENCE ================= -->
+      <section>
+        <h2>Work Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Major Incident Manager</div>
+              <div class="job-company">Power Bridge Systems Pvt Ltd (Vendor: Amazon)</div>
+            </div>
+            <div class="job-date">Apr '26 – Present</div>
+          </div>
+          <ul class="bullets">
+            <li>Orchestrate Incident and Major Incident Management lifecycles, performing real-time prioritization and impact analysis to ensure rapid service restoration.</li>
+            <li>Lead and coordinate P1 and P2 Major Incident bridges, ensuring cross-functional engagement and delivering precise, time-bound executive updates to senior leadership.</li>
+            <li>Manage shift resources and dynamically allocate tickets within SLA and OLA thresholds, driving optimal workforce utilization.</li>
+            <li>Monitor ServiceNow dashboards, Microsoft Teams channels, and email queues to identify risks and eliminate incident oversight.</li>
+            <li>Partner with Problem Management teams on in-depth Root Cause Analysis (RCA) and assess permanent remediation through standard or preventive changes.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Incident Management Lead</div>
+              <div class="job-company">Microland</div>
+            </div>
+            <div class="job-date">Sep '23 – Apr '26</div>
+          </div>
+          <ul class="bullets">
+            <li>Orchestrated Incident and Major Incident Management lifecycles with real-time prioritization and impact analysis for rapid service restoration.</li>
+            <li>Facilitated operational governance calls to review workload distribution, align incident response strategies, and ensure service continuity.</li>
+            <li>Led P1/P2 Major Incident bridges and delivered time-bound executive updates to senior leadership.</li>
+            <li>Delivered onboarding and capability-building sessions covering ITIL process, KPIs, SLAs, audit readiness, and documentation excellence.</li>
+            <li>Performed ticket quality audits with structured reviews and one-on-one coaching to elevate team performance.</li>
+            <li>Collaborated with Change &amp; Problem Management teams for controlled production transitions and permanent remediation.</li>
+          </ul>
+          <div class="label">Key Achievements</div>
+          <ul class="bullets">
+            <li>Managed shift-based operational teams of up to 10 resources, ensuring SLA adherence during critical incidents.</li>
+            <li>Led a cross-functional project that reduced incident escalation by 17%.</li>
+            <li>Reduced Mean Time to Resolution (MTTR) by 9% through improved coordination and escalation processes.</li>
+            <li>Improved incident closure accuracy and documentation quality by 25% via process standardization.</li>
+            <li>Built a new-hire training program that improved onboarding efficiency and knowledge retention by 20%.</li>
+            <li>Increased internal stakeholder satisfaction by 12% through enhanced communication.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Senior Analyst</div>
+              <div class="job-company">Accenture</div>
+            </div>
+            <div class="job-date">May '19 – Aug '23</div>
+          </div>
+          <ul class="bullets">
+            <li>Administered enterprise identity &amp; access management — Shared Mailboxes, Security Groups, and Distribution Lists — ensuring compliance and governance.</li>
+            <li>Configured and supported Microsoft O365 environments, optimizing collaboration and messaging workflows.</li>
+            <li>Diagnosed and resolved authentication failures, network/VPN access issues, and service desk incidents within SLA targets.</li>
+            <li>Spearheaded Priority 1 Major Incidents, driving cross-functional resolution and achieving a 20% reduction in service downtime.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Technical Support Engineer</div>
+              <div class="job-company">Concentrix</div>
+            </div>
+            <div class="job-date">Sep '18 – May '19</div>
+          </div>
+          <ul class="bullets">
+            <li>Delivered L1/L2 technical support via calls, chats, and tickets for Texas Instruments clients, ensuring rapid issue resolution.</li>
+            <li>Diagnosed and remediated hardware/software faults; supported deployments, password resets, VPN, domain joins, and printer issues.</li>
+            <li>Resolved SharePoint and shared network access issues to ensure uninterrupted business operations.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Catalog Associate</div>
+              <div class="job-company">Amazon</div>
+            </div>
+            <div class="job-date">Jul '17 – Apr '18</div>
+          </div>
+          <ul class="bullets">
+            <li>Analyzed seller catalog discrepancies and executed corrective actions, reducing defect rates by 15–20%.</li>
+            <li>Enabled sellers to optimize listings and metadata, increasing engagement by 10–15%.</li>
+            <li>Executed high-volume bulk updates with advanced Excel workflows, improving operational efficiency by 25%.</li>
+            <li>Validated product data against SOPs and compliance standards, maintaining 98% data accuracy.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= EDUCATION ================= -->
+      <section>
+        <h2>Education</h2>
+        <div class="edu-row">
+          <span class="deg">BCA in Computers — Mangalore University</span>
+          <span class="job-date">2016</span>
+        </div>
+      </section>
+
+      <!-- ================= CERTIFICATIONS ================= -->
+      <section>
+        <h2>Certifications</h2>
+        <ul class="bullets">
+          <li>ITIL 4 Foundation — An Introduction to ITIL 4</li>
+        </ul>
+      </section>
+
+      <!-- ================= PERSONAL ================= -->
+      <section>
+        <h2>Personal Details</h2>
+        <div class="chips">
+          <span class="chip soft">English</span>
+          <span class="chip soft">Kannada</span>
+          <span class="chip soft">Hindi</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>© <span id="yr"></span> Leeson Glen Dsouza · Built with HTML &amp; CSS · Hosted on GitHub Pages</footer>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
